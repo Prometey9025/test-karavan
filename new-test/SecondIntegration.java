@@ -7,6 +7,6 @@ public class SecondIntegration extends RouteBuilder {
     @Override
     public void configure() throws Exception {
         from("timer:java?period=1000")
-                .log(LoggingLevel.INFO,"Second Integration");
+                .log(LoggingLevel.INFO,"Second Integrationfjdsafjlkdsajflkajs");
     }
 }
