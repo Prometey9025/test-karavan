@@ -10,3 +10,6 @@
         - log:
             id: log-d284
             message: Hello Body
+        - log:
+            id: log-bc96
+            message: павпыва
