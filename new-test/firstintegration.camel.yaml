@@ -10,7 +10,3 @@
         - log:
             id: log-d284
             message: Hello Body
-        - log:
-            id: log-d100
-            message: ALARM ALARM
-            loggingLevel: WARN
