@@ -40,7 +40,7 @@ public class MyIntegration extends RouteBuilder {
                 .to("http://46.38.61.119:8080/fieldMapping/search/findMappings?source=rmate")
                 .log("After calling web service. Response: ${body}");*/
         from("timer:java?period=3000")
-                .log(LoggingLevel.INFO,"kfdgksdgfkd");
+                .log(LoggingLevel.INFO,"First Integration");
 
         //LOG.atInfo().addKeyValue("companyId",12).log();
     }
