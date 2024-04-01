@@ -1,0 +1,11 @@
+services:
+  new-test:
+    image: new-test
+    cpu_percent: 10
+    mem_limit: 1024M
+    mem_reservation: 512M
+    restart: always
+    ports:
+      - "8082:8080"
+    networks:
+      - karavan

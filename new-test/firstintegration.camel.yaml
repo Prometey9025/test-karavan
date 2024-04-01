@@ -1,0 +1,12 @@
+- route:
+    id: route-cf91
+    nodePrefixId: route-b08
+    from:
+      id: from-504b
+      uri: timer
+      parameters:
+        timerName: timer
+      steps:
+        - log:
+            id: log-d284
+            message: Hello Body
