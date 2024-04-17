@@ -1,0 +1,11 @@
+services:
+  graphql-content-api:
+    image: graphql-content-api
+    cpu_percent: 10
+    mem_limit: 1024M
+    mem_reservation: 512M
+    restart: always
+    ports:
+      - "8083:8080"
+    networks:
+      - karavan

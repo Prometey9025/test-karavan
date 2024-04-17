@@ -1,0 +1,34 @@
+- route:
+    id: route-b20f
+    nodePrefixId: route-f37
+    from:
+      id: from-ab6b
+      uri: direct
+      parameters:
+        name: query
+      steps:
+        - to:
+            id: to-866e
+            uri: graphql
+            parameters:
+              httpUri: https://lk-dev.k8s.ecopsy.com/api/content/graphql
+              query: >-
+                mutation { createDashboard ( request: { primaryDirectoryId: 125
+                name: "Test Dashboard 16" description: "" type: "GENERAL" level:
+                "EVENT" locale: "ru-RU" status: "ACTIVE" sourceId: 64
+                sourceType: "dashboard" embeddedUUID:
+                "f5833110-c422-4ea0-b2c8-b8e8d63e69cc" } ) { id name description
+                type level locale status sourceId sourceType embeddedUUID rls }
+                }
+        - log:
+            id: log-c853
+            message: ${body}
+            loggingLevel: INFO
+- rest:
+    id: rest-39c4
+    post:
+      - id: post-a5a4
+        path: /
+        to: direct:query
+        consumes: application/json
+        produces: application/json
